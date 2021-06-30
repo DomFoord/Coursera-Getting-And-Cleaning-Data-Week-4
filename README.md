@@ -1,30 +1,31 @@
 ---
-title: "README"
+title: "Getting and Cleaning Data Week 4 Course Project"
 author: "Dom Foord"
 date: "29/06/2021"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Getting and Cleaning Data Week 4 Course Project
 
-## R Markdown
+This repo was created as part of the Week 4 assignment for the Getting and Cleaning Data Coursera course. The instructions for the assignment are as follows:
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+* We download the corresponding data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip  
+* We create one R script called run_analysis.R that does the following. 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names. 
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-```{r cars}
-summary(cars)
-```
+The repo consists of four files - a zip file containing the data, the R Script file run_analysis.R, a codebook containing an explanation of all the analysis run on the data, and this readme.
 
-## Including Plots
+## Data description
 
-You can also embed plots, for example:
+The variables in the X data are sensor signals generated from waist-mounted smartphones on 30 subjects. The Y data indicates the type of action undertaken.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+## Running Instructions
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+To get the file run_analysis.R working, simply download all the files into your working directory/clone the repo and run the file. It generates a dataset containing variables based on the mean and standard deviation of the Y variables. It will then generate the file tidydata.txt, the required output of the assignment.
